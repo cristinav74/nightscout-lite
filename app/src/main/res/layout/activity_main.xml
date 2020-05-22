@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main"
+        android:paddingStart="@dimen/margin_padding"
+        android:paddingEnd="@dimen/margin_padding">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/url"
+            android:inputType="textPersonName"
+            android:layout_marginTop="@dimen/inter_component_padding"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="@dimen/inter_component_padding"
+            android:text="@string/set_default" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button6"
+            android:layout_marginTop="@dimen/inter_component_padding"
+            android:text="@string/trend"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_below="@id/textView"
+            android:layout_marginTop="@dimen/inter_component_padding" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chart"
+            android:layout_marginTop="@dimen/inter_component_padding"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Low limit: 70"
+            android:inputType="none|numberSigned" />
+
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chart"
+            android:layout_marginTop="@dimen/inter_component_padding"
+            android:layout_toEndOf="@id/editText2"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="High limit: 140"
+            android:inputType="none|numberSigned" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText2"
+            android:layout_marginTop="@dimen/inter_component_padding"
+            android:text="Set limits" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button4"
+            android:layout_marginTop="@dimen/inter_component_padding"
+            android:background="#8A673AB7"
+            android:text="Show profile" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
